@@ -19,5 +19,8 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "eslint": "^8.46.0"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
   }
 }

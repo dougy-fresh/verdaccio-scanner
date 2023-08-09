@@ -3,9 +3,7 @@ const util = require("node:util");
 const exec = util.promisify(require("node:child_process").exec);
 
 const runCommand = async ({ fixture, object = "packages" }) => {
-  return exec(
-    `node ./index.js count ${object} -- --path=./fixtures/${fixture}/`
-  );
+  return exec(`node ./index.js count ${object} --path=./fixtures/${fixture}/`);
 };
 
 t.test("one package", async (t) => {
