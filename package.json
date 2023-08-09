@@ -1,0 +1,15 @@
+{
+  "name": "verdaccio-scanner",
+  "version": "0.0.1",
+  "description": "A cli for scanning verdaccio storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "verdaccio",
+    "security"
+  ],
+  "author": "Douglas Wade <doug.wade@skilljar.com>",
+  "license": "UNLICENSED"
+}
