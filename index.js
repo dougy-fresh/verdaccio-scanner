@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const packageJson = require("./package.json");
 const { Command } = require("commander");
 const program = new Command();

@@ -1,8 +1,8 @@
 {
   "name": "verdaccio-scanner",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A cli for scanning verdaccio storage",
-  "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "tap"

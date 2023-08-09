@@ -9,6 +9,11 @@ const countPackages = (registry) => {
   return registry.size;
 };
 
+const isDirectory = async (path) => {
+  const stats = await fs.stat(path);
+  return stats.isDirectory();
+};
+
 module.exports = (program) =>
   program
     .command("count")
@@ -17,7 +22,7 @@ module.exports = (program) =>
     .option(
       "-p, --path <string>",
       "the path to verdaccio storage",
-      "/verdaccio/storage/data/"
+      "/verdaccio/storage/data"
     )
     .action(async (str, options) => {
       const packageRegistry = new Map();
@@ -48,7 +53,7 @@ module.exports = (program) =>
           } else {
             packageRegistry.set(package, new Set([packageJson.version]));
           }
-        } else {
+        } else if (await isDirectory(`${options.path}/${package}`)) {
           // This is a scope; it's a directory
           const scopedPackages = await fs.readdir(`${options.path}/${package}`);
 
