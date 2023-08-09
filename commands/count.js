@@ -8,6 +8,7 @@ module.exports = (program) =>
       "the path to verdaccio storage",
       "/verdaccio/storage/data/"
     )
-    .action((str, options) => {
-      console.log(`str: ${str} path: ${options.path}`);
+    .action((str) => {
+      const count = 1;
+      console.log(`Found a total of ${count} ${str}`);
     });

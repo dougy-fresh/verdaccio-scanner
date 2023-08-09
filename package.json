@@ -4,12 +4,20 @@
   "description": "A cli for scanning verdaccio storage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "lint": "eslint .",
+    "test": "tap"
   },
   "keywords": [
     "verdaccio",
     "security"
   ],
+  "dependencies": {
+    "commander": "^11.0.0",
+    "tap": "^16.3.8"
+  },
   "author": "Douglas Wade <doug.wade@skilljar.com>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^8.46.0"
+  }
 }
